@@ -1,0 +1,235 @@
+/* --- 1. Font Setup --- */
+@font-face {
+    font-family: 'Amore';
+    src: url('fonts/Amore Valentine-SVG.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'Qilka';
+    src: url('fonts/Qilka-Bold copy.otf') format('opentype');
+}
+
+/* --- 2. Global Bubbly Theme --- */
+body {
+    /* Gradien Pastel Pink-Ungu-Biru */
+   background-image: url('images/bubbly-bg.jpg'); 
+    background-size: cover;       /* Memastikan gambar mencakup seluruh area */
+    background-position: center;  /* Posisikan gambar di tengah */
+    background-repeat: no-repeat; /* Jangan mengulang gambar */
+    background-attachment: fixed; /* Agar background tetap saat scroll */
+    font-family: 'Qilka', 'Arial Rounded MT Bold', sans-serif; /* Fallback font */
+    color: #4a4a4a;
+}
+
+/* Navbar Transparan */
+.navbar-custom {
+    background: rgba(255, 255, 255, 0.3);
+    backdrop-filter: blur(10px);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.5);
+}
+
+.brand-logo {
+    font-family: 'Amore', cursive;
+    font-size: 3.5rem; /* Ukuran Besar */
+    background: -webkit-linear-gradient(#ff6bacee, #9b5de5);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-shadow: 2px 2px 4px rgba(255, 192, 203, 0.4);
+}
+
+/* --- 3. Efek Kartu Glossy (Kaca) --- */
+.glossy-card {
+    background: rgba(255, 255, 255, 0.65); /* Transparan Putih */
+    backdrop-filter: blur(12px); /* Efek Blur di belakang */
+    border-radius: 25px; /* Sudut membulat */
+    border: 2px solid rgba(255, 255, 255, 0.8); /* Border putih tipis */
+    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.15); /* Bayangan soft */
+    transition: transform 0.3s ease;
+}
+
+.glossy-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 40px 0 rgba(31, 38, 135, 0.25);
+}
+
+/* --- 4. Tombol Bubbly --- */
+.btn-bubbly {
+    background: linear-gradient(45deg, #ff9a9e 0%, #fad0c4 99%, #fad0c4 100%);
+    border: none;
+    border-radius: 50px;
+    padding: 10px 25px;
+    color: white;
+    font-weight: bold;
+    box-shadow: inset -3px -3px 6px rgba(0,0,0,0.1), inset 3px 3px 6px rgba(255,255,255,0.5);
+    transition: all 0.2s;
+}
+
+.btn-bubbly:hover {
+    transform: scale(1.05);
+    color: white;
+    background: linear-gradient(45deg, #ffecd2 0%, #fcb69f 100%);
+}
+
+.star-rating { color: #ffd700; }
+/* --- Animasi Glitter/Sparkle --- */
+@keyframes sparkle {
+    0% { opacity: 0.5; transform: scale(1); }
+    50% { opacity: 1; transform: scale(1.1); }
+    100% { opacity: 0.5; transform: scale(1); }
+}
+
+/* --- Base Style untuk Teks Hero --- */
+#fluffy-title {
+    display: inline-block; /* Penting agar transform bisa bekerja */
+    position: relative; /* Penting untuk penempatan glitter */
+    transition: transform 0.3s ease, text-shadow 0.3s ease;
+    cursor: pointer; /* Memberikan indikasi kursor interaktif */
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2); /* Bayangan soft dasar */
+}
+
+/* 1. Efek Menonjol (Pop) saat Kursor Diarahkan */
+#fluffy-title:hover {
+    transform: scale(1.08); /* Membuat teks membesar 8% */
+    text-shadow: 0 0 10px #ffc0cb, 0 0 30px #ff69b4; /* Efek Glow Pink/Ungu */
+}
+
+/* 2. Animasi Glitter di Sekitar Teks */
+#fluffy-title:hover::after {
+    content: "✨💖"; /* Karakter/emoji yang berfungsi sebagai glitter */
+    position: absolute;
+    top: -10px; /* Atur posisi vertikal */
+    right: -20px; /* Atur posisi horizontal */
+    font-size: 1.8rem;
+    color: #ffd700; /* Warna emas/kuning untuk kilauan */
+    /* Menerapkan animasi flicker yang dibuat di @keyframes */
+    animation: sparkle 0.6s infinite alternate; 
+}
+/* --- Animasi Glitter/Sparkle --- */
+@keyframes sparkle {
+    0% { opacity: 0.5; transform: scale(1); }
+    50% { opacity: 1; transform: scale(1.1); }
+    100% { opacity: 0.5; transform: scale(1); }
+}
+
+/* --- Base Style untuk Teks Hero --- */
+#about-bubbly {
+    display: inline-block; /* Penting agar transform bisa bekerja */
+    position: relative; /* Penting untuk penempatan glitter */
+    transition: transform 0.3s ease, text-shadow 0.3s ease;
+    cursor: pointer; /* Memberikan indikasi kursor interaktif */
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2); /* Bayangan soft dasar */
+}
+
+/* 1. Efek Menonjol (Pop) saat Kursor Diarahkan */
+#about-bubbly:hover {
+    transform: scale(1.08); /* Membuat teks membesar 8% */
+    text-shadow: 0 0 10px #ffc0cb, 0 0 30px #ff69b4; /* Efek Glow Pink/Ungu */
+}
+
+/* 2. Animasi Glitter di Sekitar Teks */
+#about-bubbly:hover::after {
+    content: "✨💖"; /* Karakter/emoji yang berfungsi sebagai glitter */
+    position: absolute;
+    top: -10px; /* Atur posisi vertikal */
+    right: -20px; /* Atur posisi horizontal */
+    font-size: 1.8rem;
+    color: #ffd700; /* Warna emas/kuning untuk kilauan */
+    /* Menerapkan animasi flicker yang dibuat di @keyframes */
+    animation: sparkle 0.6s infinite alternate; 
+}
+.user-avatar {
+    width: 50px;
+    height: 50px;
+    object-fit: cover; /* Ini penting agar gambar terpotong rapi tanpa gepeng */
+}
+.user-avatar {
+    width: 50px;
+    height: 50px;
+    object-fit: cover; /* Ini penting agar gambar terpotong rapi tanpa gepeng */
+}
+.user-avatar {
+    width: 50px;
+    height: 50px;
+    object-fit: cover; /* Ini penting agar gambar terpotong rapi tanpa gepeng */
+}
+/* --- AUTH PAGES (Login & Register) --- */
+
+/* Animasi Mengambang untuk Kotak Login */
+@keyframes float {
+    0% { transform: translateY(0px); }
+    50% { transform: translateY(-15px); }
+    100% { transform: translateY(0px); }
+}
+
+.floating-container {
+    animation: float 6s ease-in-out infinite;
+}
+
+/* Container Kaca Split */
+.auth-card {
+    background: rgba(255, 255, 255, 0.25);
+    backdrop-filter: blur(15px); /* Blur lebih kuat */
+    border: 2px solid rgba(255, 255, 255, 0.6);
+    border-radius: 40px; /* Sudut sangat bulat */
+    overflow: hidden; /* Agar konten tidak keluar dari sudut bulat */
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
+    max-width: 900px; /* Lebar maksimal */
+    width: 90%;
+}
+
+/* Sisi Gambar/Teks (Kiri/Kanan) */
+.auth-side-decor {
+    background: rgba(255, 255, 255, 0.15);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 40px;
+    color: #6a5acd; /* Warna ungu teks */
+    text-align: center;
+}
+
+/* Judul Dekoratif */
+.auth-title {
+    font-family: 'Amore', cursive;
+    font-size: 3rem;
+    color: #ff69b4; /* Hot Pink */
+    text-shadow: 2px 2px 0px rgba(255,255,255,0.8);
+}
+
+/* Input Unik (Bubbly Style) */
+.form-control-bubbly {
+    background: rgba(255, 255, 255, 0.7);
+    border: none;
+    border-radius: 50px; /* Bentuk Pill */
+    padding: 15px 25px;
+    font-family: 'Qilka', sans-serif;
+    color: #555;
+    box-shadow: inset 2px 2px 5px rgba(0,0,0,0.05); /* Bayangan dalam */
+    transition: all 0.3s;
+}
+
+.form-control-bubbly:focus {
+    background: #fff;
+    box-shadow: 0 0 15px rgba(255, 105, 180, 0.3); /* Glow Pink saat diklik */
+    transform: scale(1.02); /* Membesar sedikit */
+    outline: none;
+}
+
+/* Link Teks Kecil */
+.auth-link {
+    color: #6a5acd;
+    text-decoration: none;
+    font-weight: bold;
+    transition: 0.3s;
+}
+.auth-link:hover { color: #ff69b4; letter-spacing: 1px; }
+
+/* Container Tengah Halaman */
+.auth-wrapper {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+}
