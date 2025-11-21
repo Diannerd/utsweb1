@@ -8,7 +8,7 @@ Proyek ini adalah implementasi website e-commerce karpet custom dengan tema bubb
 
 Berikut adalah hasil akhir tampilan Halaman Utama (Project 1):
 
-![Screenshot Halaman Utama DayEn Tuft](assets/screenshot_home.png)
+![Screenshot Halaman Utama DayEn Tuft](assets/halaman utama web.png)
 
 ---
 
@@ -16,4 +16,4 @@ Berikut adalah hasil akhir tampilan Halaman Utama (Project 1):
 
 Tampilan formulir order kustom karpet (Project 2):
 
-![Screenshot Formulir Kustom Rug](assets/screenshot_form.png)
+![Screenshot Formulir Kustom Rug](assets/bruno test.png)
